@@ -2,11 +2,12 @@ gntbutton.lo: gntbutton.c /usr/include/stdlib.h /usr/include/features.h \
  /usr/include/bits/predefs.h /usr/include/sys/cdefs.h \
  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
  /usr/include/gnu/stubs-32.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h \
- /usr/include/sys/types.h /usr/include/bits/types.h \
- /usr/include/bits/typesizes.h /usr/include/time.h /usr/include/endian.h \
- /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
- /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/sys/types.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/time.h /usr/include/sys/select.h /usr/include/bits/select.h \
  /usr/include/bits/sigset.h /usr/include/bits/time.h \
  /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
  /usr/include/alloca.h /usr/include/bits/stdlib.h /usr/include/string.h \
@@ -16,23 +17,23 @@ gntbutton.lo: gntbutton.c /usr/include/stdlib.h /usr/include/features.h \
  /usr/include/glib-2.0/glib/gtypes.h \
  /usr/lib/glib-2.0/include/glibconfig.h \
  /usr/include/glib-2.0/glib/gmacros.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/limits.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/syslimits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/limits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/bits/posix2_lim.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include/float.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include/float.h \
  /usr/include/glib-2.0/glib/garray.h \
  /usr/include/glib-2.0/glib/gasyncqueue.h \
  /usr/include/glib-2.0/glib/gthread.h /usr/include/glib-2.0/glib/gerror.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stdarg.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include/stdarg.h \
  /usr/include/glib-2.0/glib/gquark.h /usr/include/glib-2.0/glib/gutils.h \
  /usr/include/glib-2.0/glib/gatomic.h \
  /usr/include/glib-2.0/glib/gbacktrace.h /usr/include/signal.h \
  /usr/include/bits/signum.h /usr/include/bits/siginfo.h \
  /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
- /usr/include/bits/sigstack.h /usr/include/bits/sigthread.h \
- /usr/include/glib-2.0/glib/gbase64.h \
+ /usr/include/bits/sigstack.h /usr/include/sys/ucontext.h \
+ /usr/include/bits/sigthread.h /usr/include/glib-2.0/glib/gbase64.h \
  /usr/include/glib-2.0/glib/gbitlock.h \
  /usr/include/glib-2.0/glib/gbookmarkfile.h \
  /usr/include/glib-2.0/glib/gcache.h /usr/include/glib-2.0/glib/glist.h \
@@ -41,7 +42,8 @@ gntbutton.lo: gntbutton.c /usr/include/stdlib.h /usr/include/features.h \
  /usr/include/glib-2.0/glib/gcompletion.h \
  /usr/include/glib-2.0/glib/gconvert.h \
  /usr/include/glib-2.0/glib/gdataset.h /usr/include/glib-2.0/glib/gdate.h \
- /usr/include/glib-2.0/glib/gdir.h \
+ /usr/include/glib-2.0/glib/gdatetime.h \
+ /usr/include/glib-2.0/glib/gtimezone.h /usr/include/glib-2.0/glib/gdir.h \
  /usr/include/glib-2.0/glib/gfileutils.h \
  /usr/include/glib-2.0/glib/ghash.h /usr/include/glib-2.0/glib/ghook.h \
  /usr/include/glib-2.0/glib/ghostutils.h \
@@ -69,15 +71,16 @@ gntbutton.lo: gntbutton.c /usr/include/stdlib.h /usr/include/features.h \
  /usr/include/glib-2.0/glib/gvarianttype.h \
  /usr/include/glib-2.0/glib/gvariant.h gntbutton.h \
  /usr/include/glib-2.0/glib-object.h \
- /usr/include/glib-2.0/gobject/gboxed.h \
- /usr/include/glib-2.0/gobject/gtype.h \
- /usr/include/glib-2.0/gobject/genums.h \
+ /usr/include/glib-2.0/gobject/gbinding.h \
  /usr/include/glib-2.0/gobject/gobject.h \
+ /usr/include/glib-2.0/gobject/gtype.h \
  /usr/include/glib-2.0/gobject/gvalue.h \
  /usr/include/glib-2.0/gobject/gparam.h \
  /usr/include/glib-2.0/gobject/gclosure.h \
  /usr/include/glib-2.0/gobject/gsignal.h \
  /usr/include/glib-2.0/gobject/gmarshal.h \
+ /usr/include/glib-2.0/gobject/gboxed.h \
+ /usr/include/glib-2.0/gobject/genums.h \
  /usr/include/glib-2.0/gobject/gparamspecs.h \
  /usr/include/glib-2.0/gobject/gsourceclosure.h \
  /usr/include/glib-2.0/gobject/gtypemodule.h \
@@ -89,7 +92,7 @@ gntbutton.lo: gntbutton.c /usr/include/stdlib.h /usr/include/features.h \
  /usr/include/bits/sys_errlist.h /usr/include/bits/stdio.h \
  /usr/include/bits/stdio2.h /usr/include/ncursesw/ncurses.h \
  /usr/include/ncursesw/ncurses_dll.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stdbool.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include/stdbool.h \
  /usr/include/ncursesw/unctrl.h /usr/include/ncursesw/curses.h \
  gntbindable.h gntclipboard.h gntcolors.h gntkeys.h \
  /usr/include/ncursesw/curses.h /usr/include/ncursesw/term.h \
@@ -112,7 +115,17 @@ gntbutton.lo: gntbutton.c /usr/include/stdlib.h /usr/include/features.h \
 
 /usr/include/gnu/stubs-32.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include/stddef.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/byteswap.h:
 
 /usr/include/sys/types.h:
 
@@ -121,12 +134,6 @@ gntbutton.lo: gntbutton.c /usr/include/stdlib.h /usr/include/features.h \
 /usr/include/bits/typesizes.h:
 
 /usr/include/time.h:
-
-/usr/include/endian.h:
-
-/usr/include/bits/endian.h:
-
-/usr/include/bits/byteswap.h:
 
 /usr/include/sys/select.h:
 
@@ -166,9 +173,9 @@ gntinternal.h:
 
 /usr/include/glib-2.0/glib/gmacros.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/limits.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/limits.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/syslimits.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/syslimits.h:
 
 /usr/include/limits.h:
 
@@ -180,7 +187,7 @@ gntinternal.h:
 
 /usr/include/bits/posix2_lim.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include/float.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include/float.h:
 
 /usr/include/glib-2.0/glib/garray.h:
 
@@ -190,7 +197,7 @@ gntinternal.h:
 
 /usr/include/glib-2.0/glib/gerror.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include/stdarg.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include/stdarg.h:
 
 /usr/include/glib-2.0/glib/gquark.h:
 
@@ -211,6 +218,8 @@ gntinternal.h:
 /usr/include/bits/sigcontext.h:
 
 /usr/include/bits/sigstack.h:
+
+/usr/include/sys/ucontext.h:
 
 /usr/include/bits/sigthread.h:
 
@@ -237,6 +246,10 @@ gntinternal.h:
 /usr/include/glib-2.0/glib/gdataset.h:
 
 /usr/include/glib-2.0/glib/gdate.h:
+
+/usr/include/glib-2.0/glib/gdatetime.h:
+
+/usr/include/glib-2.0/glib/gtimezone.h:
 
 /usr/include/glib-2.0/glib/gdir.h:
 
@@ -314,13 +327,11 @@ gntbutton.h:
 
 /usr/include/glib-2.0/glib-object.h:
 
-/usr/include/glib-2.0/gobject/gboxed.h:
-
-/usr/include/glib-2.0/gobject/gtype.h:
-
-/usr/include/glib-2.0/gobject/genums.h:
+/usr/include/glib-2.0/gobject/gbinding.h:
 
 /usr/include/glib-2.0/gobject/gobject.h:
+
+/usr/include/glib-2.0/gobject/gtype.h:
 
 /usr/include/glib-2.0/gobject/gvalue.h:
 
@@ -331,6 +342,10 @@ gntbutton.h:
 /usr/include/glib-2.0/gobject/gsignal.h:
 
 /usr/include/glib-2.0/gobject/gmarshal.h:
+
+/usr/include/glib-2.0/gobject/gboxed.h:
+
+/usr/include/glib-2.0/gobject/genums.h:
 
 /usr/include/glib-2.0/gobject/gparamspecs.h:
 
@@ -368,7 +383,7 @@ gntwidget.h:
 
 /usr/include/ncursesw/ncurses_dll.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include/stdbool.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include/stdbool.h:
 
 /usr/include/ncursesw/unctrl.h:
 

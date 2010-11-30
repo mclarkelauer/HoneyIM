@@ -2,20 +2,20 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
  /usr/lib/glib-2.0/include/glibconfig.h \
  /usr/include/glib-2.0/glib/gmacros.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/limits.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/syslimits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include/stddef.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/limits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/features.h \
  /usr/include/bits/predefs.h /usr/include/sys/cdefs.h \
  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
  /usr/include/gnu/stubs-32.h /usr/include/bits/posix1_lim.h \
  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/bits/posix2_lim.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include/float.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include/float.h \
  /usr/include/glib-2.0/glib/garray.h \
  /usr/include/glib-2.0/glib/gasyncqueue.h \
  /usr/include/glib-2.0/glib/gthread.h /usr/include/glib-2.0/glib/gerror.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stdarg.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include/stdarg.h \
  /usr/include/glib-2.0/glib/gquark.h /usr/include/glib-2.0/glib/gutils.h \
  /usr/include/glib-2.0/glib/gatomic.h \
  /usr/include/glib-2.0/glib/gbacktrace.h /usr/include/signal.h \
@@ -23,8 +23,9 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
  /usr/include/bits/typesizes.h /usr/include/bits/signum.h \
  /usr/include/time.h /usr/include/bits/siginfo.h \
  /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
- /usr/include/bits/sigstack.h /usr/include/bits/pthreadtypes.h \
- /usr/include/bits/sigthread.h /usr/include/glib-2.0/glib/gbase64.h \
+ /usr/include/bits/sigstack.h /usr/include/sys/ucontext.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/bits/sigthread.h \
+ /usr/include/glib-2.0/glib/gbase64.h \
  /usr/include/glib-2.0/glib/gbitlock.h \
  /usr/include/glib-2.0/glib/gbookmarkfile.h /usr/include/bits/time.h \
  /usr/include/xlocale.h /usr/include/glib-2.0/glib/gcache.h \
@@ -34,7 +35,8 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/gcompletion.h \
  /usr/include/glib-2.0/glib/gconvert.h \
  /usr/include/glib-2.0/glib/gdataset.h /usr/include/glib-2.0/glib/gdate.h \
- /usr/include/glib-2.0/glib/gdir.h \
+ /usr/include/glib-2.0/glib/gdatetime.h \
+ /usr/include/glib-2.0/glib/gtimezone.h /usr/include/glib-2.0/glib/gdir.h \
  /usr/include/glib-2.0/glib/gfileutils.h \
  /usr/include/glib-2.0/glib/ghash.h /usr/include/glib-2.0/glib/ghook.h \
  /usr/include/glib-2.0/glib/ghostutils.h \
@@ -61,8 +63,9 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/gurifuncs.h \
  /usr/include/glib-2.0/glib/gvarianttype.h \
  /usr/include/glib-2.0/glib/gvariant.h /usr/include/stdlib.h \
- /usr/include/sys/types.h /usr/include/endian.h \
- /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/sys/types.h \
  /usr/include/sys/select.h /usr/include/bits/select.h \
  /usr/include/sys/sysmacros.h /usr/include/alloca.h \
  /usr/include/bits/stdlib.h ../../../libpurple/internal.h \
@@ -70,7 +73,6 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
  /usr/include/libintl.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
  /usr/include/sys/time.h /usr/include/sys/wait.h \
  /usr/include/sys/resource.h /usr/include/bits/resource.h \
- /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
  /usr/include/ctype.h /usr/include/errno.h /usr/include/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
@@ -97,18 +99,20 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
  /usr/include/sys/utsname.h /usr/include/bits/utsname.h \
  /usr/include/netdb.h /usr/include/rpc/netdb.h /usr/include/bits/netdb.h \
  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
- /usr/include/bits/confname.h /usr/include/getopt.h \
- /usr/include/bits/unistd.h /usr/include/glib-2.0/glib/gstdio.h \
- /usr/include/glib-2.0/glib/gprintf.h /usr/include/glib-2.0/glib-object.h \
- /usr/include/glib-2.0/gobject/gboxed.h \
- /usr/include/glib-2.0/gobject/gtype.h \
- /usr/include/glib-2.0/gobject/genums.h \
+ /usr/include/bits/environments.h /usr/include/bits/confname.h \
+ /usr/include/getopt.h /usr/include/bits/unistd.h \
+ /usr/include/glib-2.0/glib/gstdio.h /usr/include/glib-2.0/glib/gprintf.h \
+ /usr/include/glib-2.0/glib-object.h \
+ /usr/include/glib-2.0/gobject/gbinding.h \
  /usr/include/glib-2.0/gobject/gobject.h \
+ /usr/include/glib-2.0/gobject/gtype.h \
  /usr/include/glib-2.0/gobject/gvalue.h \
  /usr/include/glib-2.0/gobject/gparam.h \
  /usr/include/glib-2.0/gobject/gclosure.h \
  /usr/include/glib-2.0/gobject/gsignal.h \
  /usr/include/glib-2.0/gobject/gmarshal.h \
+ /usr/include/glib-2.0/gobject/gboxed.h \
+ /usr/include/glib-2.0/gobject/genums.h \
  /usr/include/glib-2.0/gobject/gparamspecs.h \
  /usr/include/glib-2.0/gobject/gsourceclosure.h \
  /usr/include/glib-2.0/gobject/gtypemodule.h \
@@ -167,11 +171,11 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
 
 /usr/include/glib-2.0/glib/gmacros.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include/stddef.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/limits.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/limits.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/syslimits.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/syslimits.h:
 
 /usr/include/limits.h:
 
@@ -195,7 +199,7 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
 
 /usr/include/bits/posix2_lim.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include/float.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include/float.h:
 
 /usr/include/glib-2.0/glib/garray.h:
 
@@ -205,7 +209,7 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
 
 /usr/include/glib-2.0/glib/gerror.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include/stdarg.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include/stdarg.h:
 
 /usr/include/glib-2.0/glib/gquark.h:
 
@@ -234,6 +238,8 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
 /usr/include/bits/sigcontext.h:
 
 /usr/include/bits/sigstack.h:
+
+/usr/include/sys/ucontext.h:
 
 /usr/include/bits/pthreadtypes.h:
 
@@ -266,6 +272,10 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
 /usr/include/glib-2.0/glib/gdataset.h:
 
 /usr/include/glib-2.0/glib/gdate.h:
+
+/usr/include/glib-2.0/glib/gdatetime.h:
+
+/usr/include/glib-2.0/glib/gtimezone.h:
 
 /usr/include/glib-2.0/glib/gdir.h:
 
@@ -341,13 +351,17 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
 
 /usr/include/stdlib.h:
 
-/usr/include/sys/types.h:
+/usr/include/bits/waitflags.h:
+
+/usr/include/bits/waitstatus.h:
 
 /usr/include/endian.h:
 
 /usr/include/bits/endian.h:
 
 /usr/include/bits/byteswap.h:
+
+/usr/include/sys/types.h:
 
 /usr/include/sys/select.h:
 
@@ -380,10 +394,6 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
 /usr/include/sys/resource.h:
 
 /usr/include/bits/resource.h:
-
-/usr/include/bits/waitflags.h:
-
-/usr/include/bits/waitstatus.h:
 
 /usr/include/ctype.h:
 
@@ -499,6 +509,8 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
 
 /usr/include/bits/posix_opt.h:
 
+/usr/include/bits/environments.h:
+
 /usr/include/bits/confname.h:
 
 /usr/include/getopt.h:
@@ -511,13 +523,11 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
 
 /usr/include/glib-2.0/glib-object.h:
 
-/usr/include/glib-2.0/gobject/gboxed.h:
-
-/usr/include/glib-2.0/gobject/gtype.h:
-
-/usr/include/glib-2.0/gobject/genums.h:
+/usr/include/glib-2.0/gobject/gbinding.h:
 
 /usr/include/glib-2.0/gobject/gobject.h:
+
+/usr/include/glib-2.0/gobject/gtype.h:
 
 /usr/include/glib-2.0/gobject/gvalue.h:
 
@@ -528,6 +538,10 @@ libbonjour_la-buddy.lo: buddy.c /usr/include/glib-2.0/glib.h \
 /usr/include/glib-2.0/gobject/gsignal.h:
 
 /usr/include/glib-2.0/gobject/gmarshal.h:
+
+/usr/include/glib-2.0/gobject/gboxed.h:
+
+/usr/include/glib-2.0/gobject/genums.h:
 
 /usr/include/glib-2.0/gobject/gparamspecs.h:
 

@@ -6,8 +6,8 @@ datarootdir=${prefix}/share
 datadir=${datarootdir}
 sysconfdir=${prefix}/etc
 
-abs_srcdir=/home/mdlauer/pidgin-2.7.3/libpurple
-abs_builddir=/home/mdlauer/pidgin-2.7.3/libpurple
+abs_srcdir=/home/mclarkelauer/HoneyIM/pidgin-2.7.3/libpurple
+abs_builddir=/home/mclarkelauer/HoneyIM/pidgin-2.7.3/libpurple
 
 plugindir=${libdir}/purple-2
 

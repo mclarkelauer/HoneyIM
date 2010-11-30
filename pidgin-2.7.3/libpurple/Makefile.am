@@ -311,6 +311,8 @@ libpurple_la_LIBADD = \
 	$(GSTREAMER_LIBS) \
 	$(GSTINTERFACES_LIBS) \
 	$(IDN_LIBS) \
+	-L/usr/lib/mysql \
+	-lmysqlclient  \
 	-lm
 
 AM_CPPFLAGS = \
@@ -326,7 +328,15 @@ AM_CPPFLAGS = \
 	$(GSTREAMER_CFLAGS) \
 	$(GSTINTERFACES_CFLAGS) \
 	$(IDN_CFLAGS) \
-	$(NETWORKMANAGER_CFLAGS)
+	$(NETWORKMANAGER_CFLAGS) \ 
+	-DBIG_JOINS=1 \
+ 	-fno-strict-aliasing \ 
+ 	-DUNIV_LINUX \
+	-Bsymbolic-functions \
+	-rdynamic \
+	-L/usr/lib/mysql \
+	-lmysqlclient
+
 
 # INSTALL_SSL_CERTIFICATES is true when SSL_CERTIFICATES_DIR is empty.
 # We want to use SSL_CERTIFICATES_DIR when it's not empty.

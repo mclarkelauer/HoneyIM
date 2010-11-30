@@ -9,7 +9,7 @@ WriteMakefile(
       ('ABSTRACT_FROM' => './Pidgin.pm', # finds $ABSTRACT
        'AUTHOR'        => 'Pidgin <http://pidgin.im/>') :  ()),
     'DEFINE'        => '-Wall  -DPURPLE_DISABLE_DEPRECATED -DPIDGIN_DISABLE_DEPRECATED -DFINCH_DISABLE_DEPRECATED -DGNT_DISABLE_DEPRECATED -Waggregate-return -Wcast-align -Wdeclaration-after-statement -Wendif-labels -Werror-implicit-function-declaration -Wextra -Wno-sign-compare -Wno-unused-parameter -Wformat-security -Werror=format-security -Winit-self -Wmissing-declarations -Wmissing-noreturn -Wmissing-prototypes -Wpointer-arith -Wundef -Wp,-D_FORTIFY_SOURCE=2',
-    'INC'           => '-I. -I. -I../../../.. -I../../../../libpurple -I../../../../pidgin -pthread -D_REENTRANT -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/directfb -I/usr/include/libpng12  ',
+    'INC'           => '-I. -I. -I../../../.. -I../../../../libpurple -I../../../../pidgin -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12  ',
     'OBJECT'        => '$(O_FILES)', # link all the C files too
     'TYPEMAPS'      => ["../../../../libpurple/plugins/perl/common/typemap"],
 #    'OPTIMIZE'      => '-g', # For debugging.

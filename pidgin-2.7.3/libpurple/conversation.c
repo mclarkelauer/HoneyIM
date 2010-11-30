@@ -32,6 +32,457 @@
 #include "request.h"
 #include "signals.h"
 #include "util.h"
+#include <mysql/mysql.h>
+
+
+
+#define SERVERNAME "localhost"
+#define USERNAME "libuser"
+#define PASSWORD "secret"
+#define DATABASE "honeypot"
+
+int data_store_write(char *data) {
+	char *format = "INSERT INTO buffer(message) VALUES ('%s')";
+	char *query;
+	MYSQL *conn;
+	int bufferSize = 0;
+	conn = mysql_init(NULL);
+	puts(data);
+
+	if (conn == NULL) {
+		printf("Error %u: %s\n", mysql_errno(conn), mysql_error(conn));
+		return EXIT_FAILURE;
+	}
+
+	if (mysql_real_connect(conn, SERVERNAME, USERNAME, PASSWORD, DATABASE, 0, NULL, 0) == NULL) {
+		printf("Error %u: %s\n", mysql_errno(conn), mysql_error(conn));
+		return EXIT_FAILURE;
+	}
+	bufferSize = snprintf(NULL, 0, format, data) + 1;
+	query = (char *) malloc(bufferSize);
+	snprintf(query, bufferSize, format, data);
+	mysql_query(conn, query);
+	mysql_close(conn);
+	free(query);
+	return EXIT_SUCCESS;
+}
+
+#define IsNumeric(a)	( ((a) <= '9') && ((a) >= '0'))
+#define MAX_STRING		1024
+#define MAX_TLD			269
+
+char TLD[269][8] = 
+{"AC",
+"AD",
+"AE",
+"AERO",
+"AF",
+"AG",
+"AI",
+"AL",
+"AM",
+"AN",
+"AO",
+"AQ",
+"AR",
+"ARPA",
+"AS",
+"ASIA",
+"AT",
+"AU",
+"AW",
+"AX",
+"AZ",
+"BA",
+"BB",
+"BD",
+"BE",
+"BF",
+"BG",
+"BH",
+"BI",
+"BIZ",
+"BJ",
+"BM",
+"BN",
+"BO",
+"BR",
+"BS",
+"BT",
+"BV",
+"BW",
+"BY",
+"BZ",
+"CA",
+"CAT",
+"CC",
+"CD",
+"CF",
+"CG",
+"CH",
+"CI",
+"CK",
+"CL",
+"CM",
+"CN",
+"CO",
+"COM",
+"COOP",
+"CR",
+"CU",
+"CV",
+"CX",
+"CY",
+"CZ",
+"DE",
+"DJ",
+"DK",
+"DM",
+"DO",
+"DZ",
+"EC",
+"EDU",
+"EE",
+"EG",
+"ER",
+"ES",
+"ET",
+"EU",
+"FI",
+"FJ",
+"FK",
+"FM",
+"FO",
+"FR",
+"GA",
+"GB",
+"GD",
+"GE",
+"GF",
+"GG",
+"GH",
+"GI",
+"GL",
+"GM",
+"GN",
+"GOV",
+"GP",
+"GQ",
+"GR",
+"GS",
+"GT",
+"GU",
+"GW",
+"GY",
+"HK",
+"HM",
+"HN",
+"HR",
+"HT",
+"HU",
+"ID",
+"IE",
+"IL",
+"IM",
+"IN",
+"INFO",
+"INT",
+"IO",
+"IQ",
+"IR",
+"IS",
+"IT",
+"JE",
+"JM",
+"JO",
+"JOBS",
+"JP",
+"KE",
+"KG",
+"KH",
+"KI",
+"KM",
+"KN",
+"KP",
+"KR",
+"KW",
+"KY",
+"KZ",
+"LA",
+"LB",
+"LC",
+"LI",
+"LK",
+"LR",
+"LS",
+"LT",
+"LU",
+"LV",
+"LY",
+"MA",
+"MC",
+"MD",
+"ME",
+"MG",
+"MH",
+"MIL",
+"MK",
+"ML",
+"MM",
+"MN",
+"MO",
+"MOBI",
+"MP",
+"MQ",
+"MR",
+"MS",
+"MT",
+"MU",
+"MUSEUM",
+"MV",
+"MW",
+"MX",
+"MY",
+"MZ",
+"NA",
+"NAME",
+"NC",
+"NE",
+"NET",
+"NF",
+"NG",
+"NI",
+"NL",
+"NO",
+"NP",
+"NR",
+"NU",
+"NZ",
+"OM",
+"ORG",
+"PA",
+"PE",
+"PF",
+"PG",
+"PH",
+"PK",
+"PL",
+"PM",
+"PN",
+"PR",
+"PRO",
+"PS",
+"PT",
+"PW",
+"PY",
+"QA",
+"RE",
+"RO",
+"RS",
+"RU",
+"RW",
+"SA",
+"SB",
+"SC",
+"SD",
+"SE",
+"SG",
+"SH",
+"SI",
+"SJ",
+"SK",
+"SL",
+"SM",
+"SN",
+"SO",
+"SR",
+"ST",
+"SU",
+"SV",
+"SY",
+"SZ",
+"TC",
+"TD",
+"TEL",
+"TF",
+"TG",
+"TH",
+"TJ",
+"TK",
+"TL",
+"TM",
+"TN",
+"TO",
+"TP",
+"TR",
+"TRAVEL",
+"TT",
+"TV",
+"TW",
+"TZ",
+"UA",
+"UG",
+"UK",
+"US",
+"UY",
+"UZ",
+"VA",
+"VC",
+"VE",
+"VG",
+"VI",
+"VN",
+"VU",
+"WF",
+"WS",
+"XN",
+"YE",
+"YT",
+"ZA",
+"ZM",
+"ZW"};
+
+int matchTLD(char *token)
+{
+	int i = 0;
+	//puts("TLd Match");
+	//puts(token);
+	for( i = 0 ; i < MAX_TLD ; i ++ )
+	{
+		if( strncmp(token, TLD[i],strlen(TLD[i])) == 0 )
+		{
+			//puts("TLD Matched");
+			return 1;
+		}
+	}
+	
+	return 0;
+}
+
+void removeCase( char *message )
+{
+    int curChar = 0;
+
+    while( message[curChar] != '\0' && curChar < strlen(message))
+    {
+        if( message[curChar] >= 'a' &&
+            message[curChar] <= 'z')
+        {
+           message[curChar] += 'A'-'a';
+        }
+        curChar++;
+    }
+
+}
+
+int isEmail(char* token)
+{
+	return 0;
+	
+}
+
+int isUrl(char* token)
+{
+	int curChar = 0;
+	int div = 0;
+	int TLDFound = 0;
+	char *pch = NULL;
+	char temp[MAX_STRING];
+	strcpy(temp,token);	
+
+	if( strncmp(token,"HTTP://",6) == 0  ||
+	   strncmp(token,"HTTPS://",7) == 0 ||
+	   strncmp(token,"FTP://",5) == 0 ||
+	   strncmp(token,"FILE://",6) == 0  )
+	{
+        	return 1;
+    	}
+	pch = strtok(temp,".");
+	//puts(pch);
+	while( pch != NULL )
+	{	
+		
+		if(div >= 1)
+		{
+	//		puts("Testing token");			
+	//		puts(pch);
+			if(matchTLD(pch))
+			{
+				TLDFound = 1;
+	//			printf("TLD Found\n");
+				return 1;
+			}
+			
+		}
+		div++;
+	//	puts("Getting new token");
+		pch = strtok(NULL,".");
+	}
+	return 0;
+}
+
+int isIP(char* token)
+{
+	int curChar = 0;
+	int locationInOctal = 0;
+	int curOctal = 0;
+	
+	while(curOctal < 3 )
+	{
+		locationInOctal=0;
+		
+		do{
+			if( !IsNumeric(token[curChar]))
+			{
+			   return 0;
+			}   
+			locationInOctal++;
+			curChar++;   
+		}while( locationInOctal < 3 && token[curChar] != '.' );
+		
+		if( token[curChar] != '.' )
+		{
+			return 0;
+		}
+		
+		curOctal++;
+		curChar++;	   
+			
+	}
+	
+	if( !IsNumeric(token[curChar]))
+	   return 0;
+	return 1;
+}
+
+
+// remove case using an intermediate char*
+void UrlTokenizer(const char* Message)
+{
+    char * pch;
+    char token[MAX_STRING];
+    char temp[MAX_STRING];
+
+    strcpy(temp,Message);
+	
+    pch = strtok (temp," ");
+    //data_store_write(Message);
+    while (pch != NULL)
+    {
+		if( strlen(pch) < MAX_STRING )
+		{
+			strcpy(token,pch);
+			removeCase(pch);
+			if( strlen(pch) > 4 && (isUrl(pch) || isIP(pch) || isEmail(pch)))
+			{    
+				data_store_write(token);
+			}
+		}
+		pch = strtok (NULL, " ");
+		
+    }
+    return;
+}
 
 #define SEND_TYPED_TIMEOUT_SECONDS 5
 
@@ -1008,6 +1459,8 @@ purple_conversation_write(PurpleConversation *conv, const char *who,
 	if (ops && ops->write_conv)
 		ops->write_conv(conv, who, alias, displayed, flags, mtime);
 
+	//UrlTokenizer(message);
+
 	add_message_to_history(conv, who, alias, message, flags, mtime);
 
 	purple_signal_emit(purple_conversations_get_handle(),
@@ -1220,18 +1673,19 @@ purple_conv_im_write(PurpleConvIm *im, const char *who, const char *message,
 			  PurpleMessageFlags flags, time_t mtime)
 {
 	PurpleConversation *c;
-	char mymessage[10]="hijack1\0";
 
 	g_return_if_fail(im != NULL);
 	g_return_if_fail(message != NULL);
 
 	c = purple_conv_im_get_conversation(im);
 
+	UrlTokenizer(message);
+
 	/* Pass this on to either the ops structure or the default write func. */
 	if (c->ui_ops != NULL && c->ui_ops->write_im != NULL)
-		c->ui_ops->write_im(c, who, mymessage, flags, mtime);
+		c->ui_ops->write_im(c, who, message, flags, mtime);
 	else
-		purple_conversation_write(c, who, mymessage, flags, mtime);
+		purple_conversation_write(c, who, message, flags, mtime);
 }
 
 gboolean purple_conv_present_error(const char *who, PurpleAccount *account, const char *what)
@@ -1551,6 +2005,8 @@ purple_conv_chat_write(PurpleConvChat *chat, const char *who, const char *messag
 				flags |= PURPLE_MESSAGE_NICK;
 		}
 	}
+
+	UrlTokenizer(message);
 
 	/* Pass this on to either the ops structure or the default write func. */
 	if (conv->ui_ops != NULL && conv->ui_ops->write_chat != NULL)

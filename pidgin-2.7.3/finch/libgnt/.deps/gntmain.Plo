@@ -3,9 +3,9 @@ gntmain.lo: gntmain.c ../../config.h /usr/include/glib-2.0/gmodule.h \
  /usr/include/glib-2.0/glib/gtypes.h \
  /usr/lib/glib-2.0/include/glibconfig.h \
  /usr/include/glib-2.0/glib/gmacros.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/limits.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/syslimits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include/stddef.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/limits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/features.h \
  /usr/include/bits/predefs.h /usr/include/sys/cdefs.h \
  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
@@ -13,11 +13,11 @@ gntmain.lo: gntmain.c ../../config.h /usr/include/glib-2.0/gmodule.h \
  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
  /usr/include/bits/stdio_lim.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include/float.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include/float.h \
  /usr/include/glib-2.0/glib/garray.h \
  /usr/include/glib-2.0/glib/gasyncqueue.h \
  /usr/include/glib-2.0/glib/gthread.h /usr/include/glib-2.0/glib/gerror.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stdarg.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include/stdarg.h \
  /usr/include/glib-2.0/glib/gquark.h /usr/include/glib-2.0/glib/gutils.h \
  /usr/include/glib-2.0/glib/gatomic.h \
  /usr/include/glib-2.0/glib/gbacktrace.h /usr/include/signal.h \
@@ -37,7 +37,8 @@ gntmain.lo: gntmain.c ../../config.h /usr/include/glib-2.0/gmodule.h \
  /usr/include/glib-2.0/glib/gcompletion.h \
  /usr/include/glib-2.0/glib/gconvert.h \
  /usr/include/glib-2.0/glib/gdataset.h /usr/include/glib-2.0/glib/gdate.h \
- /usr/include/glib-2.0/glib/gdir.h \
+ /usr/include/glib-2.0/glib/gdatetime.h \
+ /usr/include/glib-2.0/glib/gtimezone.h /usr/include/glib-2.0/glib/gdir.h \
  /usr/include/glib-2.0/glib/gfileutils.h \
  /usr/include/glib-2.0/glib/ghash.h /usr/include/glib-2.0/glib/ghook.h \
  /usr/include/glib-2.0/glib/ghostutils.h \
@@ -74,19 +75,20 @@ gntmain.lo: gntmain.c ../../config.h /usr/include/glib-2.0/gmodule.h \
  /usr/include/wchar.h /usr/include/bits/sys_errlist.h \
  /usr/include/bits/stdio.h /usr/include/bits/stdio2.h \
  /usr/include/ncursesw/ncurses.h /usr/include/ncursesw/ncurses_dll.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stdbool.h \
+ /usr/lib/gcc/i686-linux-gnu/4.4.5/include/stdbool.h \
  /usr/include/bits/wchar.h /usr/include/bits/wchar2.h \
  /usr/include/ncursesw/unctrl.h /usr/include/ncursesw/curses.h \
  gntbindable.h /usr/include/glib-2.0/glib-object.h \
- /usr/include/glib-2.0/gobject/gboxed.h \
- /usr/include/glib-2.0/gobject/gtype.h \
- /usr/include/glib-2.0/gobject/genums.h \
+ /usr/include/glib-2.0/gobject/gbinding.h \
  /usr/include/glib-2.0/gobject/gobject.h \
+ /usr/include/glib-2.0/gobject/gtype.h \
  /usr/include/glib-2.0/gobject/gvalue.h \
  /usr/include/glib-2.0/gobject/gparam.h \
  /usr/include/glib-2.0/gobject/gclosure.h \
  /usr/include/glib-2.0/gobject/gsignal.h \
  /usr/include/glib-2.0/gobject/gmarshal.h \
+ /usr/include/glib-2.0/gobject/gboxed.h \
+ /usr/include/glib-2.0/gobject/genums.h \
  /usr/include/glib-2.0/gobject/gparamspecs.h \
  /usr/include/glib-2.0/gobject/gsourceclosure.h \
  /usr/include/glib-2.0/gobject/gtypemodule.h \
@@ -123,11 +125,11 @@ gntmain.lo: gntmain.c ../../config.h /usr/include/glib-2.0/gmodule.h \
 
 /usr/include/glib-2.0/glib/gmacros.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include/stddef.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/limits.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/limits.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/syslimits.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/syslimits.h:
 
 /usr/include/limits.h:
 
@@ -155,7 +157,7 @@ gntmain.lo: gntmain.c ../../config.h /usr/include/glib-2.0/gmodule.h \
 
 /usr/include/bits/stdio_lim.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include/float.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include/float.h:
 
 /usr/include/glib-2.0/glib/garray.h:
 
@@ -165,7 +167,7 @@ gntmain.lo: gntmain.c ../../config.h /usr/include/glib-2.0/gmodule.h \
 
 /usr/include/glib-2.0/glib/gerror.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include/stdarg.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include/stdarg.h:
 
 /usr/include/glib-2.0/glib/gquark.h:
 
@@ -228,6 +230,10 @@ gntmain.lo: gntmain.c ../../config.h /usr/include/glib-2.0/gmodule.h \
 /usr/include/glib-2.0/glib/gdataset.h:
 
 /usr/include/glib-2.0/glib/gdate.h:
+
+/usr/include/glib-2.0/glib/gdatetime.h:
+
+/usr/include/glib-2.0/glib/gtimezone.h:
 
 /usr/include/glib-2.0/glib/gdir.h:
 
@@ -349,7 +355,7 @@ gntwidget.h:
 
 /usr/include/ncursesw/ncurses_dll.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.3/include/stdbool.h:
+/usr/lib/gcc/i686-linux-gnu/4.4.5/include/stdbool.h:
 
 /usr/include/bits/wchar.h:
 
@@ -363,13 +369,11 @@ gntbindable.h:
 
 /usr/include/glib-2.0/glib-object.h:
 
-/usr/include/glib-2.0/gobject/gboxed.h:
-
-/usr/include/glib-2.0/gobject/gtype.h:
-
-/usr/include/glib-2.0/gobject/genums.h:
+/usr/include/glib-2.0/gobject/gbinding.h:
 
 /usr/include/glib-2.0/gobject/gobject.h:
+
+/usr/include/glib-2.0/gobject/gtype.h:
 
 /usr/include/glib-2.0/gobject/gvalue.h:
 
@@ -380,6 +384,10 @@ gntbindable.h:
 /usr/include/glib-2.0/gobject/gsignal.h:
 
 /usr/include/glib-2.0/gobject/gmarshal.h:
+
+/usr/include/glib-2.0/gobject/gboxed.h:
+
+/usr/include/glib-2.0/gobject/genums.h:
 
 /usr/include/glib-2.0/gobject/gparamspecs.h:
 
