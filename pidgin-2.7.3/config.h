@@ -105,16 +105,16 @@
 #define HAVE_GETTEXT 1
 
 /* Define if you have GnuTLS */
-/* #undef HAVE_GNUTLS */
+#define HAVE_GNUTLS 1
 
 /* Define if your gnutls has the GNUTLS_CERT_INSECURE_ALGORITHM flag */
-/* #undef HAVE_GNUTLS_CERT_INSECURE_ALGORITHM */
+#define HAVE_GNUTLS_CERT_INSECURE_ALGORITHM 1
 
 /* Define to 1 if you have the <gnutls/gnutls.h> header file. */
-/* #undef HAVE_GNUTLS_GNUTLS_H */
+#define HAVE_GNUTLS_GNUTLS_H 1
 
 /* Define if your gnutls has gnutls_priority_set_direct and friends */
-/* #undef HAVE_GNUTLS_PRIORITY_FUNCS */
+#define HAVE_GNUTLS_PRIORITY_FUNCS 1
 
 /* Define to 1 if you have the `inet_ntop' function. */
 #define HAVE_INET_NTOP 1

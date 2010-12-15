@@ -6,11 +6,11 @@ datarootdir=${prefix}/share
 datadir=${datarootdir}
 sysconfdir=${prefix}/etc
 
-abs_srcdir=/home/mclarkelauer/HoneyIM/pidgin-2.7.3/libpurple
-abs_builddir=/home/mclarkelauer/HoneyIM/pidgin-2.7.3/libpurple
+abs_srcdir=/home/mdlauer/HoneyIM/pidgin-2.7.3/libpurple
+abs_builddir=/home/mdlauer/HoneyIM/pidgin-2.7.3/libpurple
 
-abs_top_srcdir=/home/mclarkelauer/HoneyIM/pidgin-2.7.3
-abs_top_builddir=/home/mclarkelauer/HoneyIM/pidgin-2.7.3
+abs_top_srcdir=/home/mdlauer/HoneyIM/pidgin-2.7.3
+abs_top_builddir=/home/mdlauer/HoneyIM/pidgin-2.7.3
 
 plugindir=${libdir}/purple-2
 

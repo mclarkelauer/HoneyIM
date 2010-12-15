@@ -2,7 +2,7 @@ libqq_la-qq_crypt.lo: qq_crypt.c /usr/include/string.h \
  /usr/include/features.h /usr/include/bits/predefs.h \
  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
- /usr/lib/gcc/i686-linux-gnu/4.4.5/include/stddef.h \
+ /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h \
  /usr/include/xlocale.h /usr/include/bits/string.h \
  /usr/include/bits/string2.h /usr/include/endian.h \
  /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
@@ -12,25 +12,24 @@ libqq_la-qq_crypt.lo: qq_crypt.c /usr/include/string.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
  /usr/lib/glib-2.0/include/glibconfig.h \
  /usr/include/glib-2.0/glib/gmacros.h \
- /usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/limits.h \
- /usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/syslimits.h \
+ /usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/limits.h \
+ /usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/bits/posix2_lim.h \
- /usr/lib/gcc/i686-linux-gnu/4.4.5/include/float.h \
+ /usr/lib/gcc/i486-linux-gnu/4.4.3/include/float.h \
  /usr/include/glib-2.0/glib/garray.h \
  /usr/include/glib-2.0/glib/gasyncqueue.h \
  /usr/include/glib-2.0/glib/gthread.h /usr/include/glib-2.0/glib/gerror.h \
- /usr/lib/gcc/i686-linux-gnu/4.4.5/include/stdarg.h \
+ /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stdarg.h \
  /usr/include/glib-2.0/glib/gquark.h /usr/include/glib-2.0/glib/gutils.h \
  /usr/include/glib-2.0/glib/gatomic.h \
  /usr/include/glib-2.0/glib/gbacktrace.h /usr/include/signal.h \
  /usr/include/bits/sigset.h /usr/include/bits/signum.h \
  /usr/include/time.h /usr/include/bits/siginfo.h \
  /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
- /usr/include/bits/sigstack.h /usr/include/sys/ucontext.h \
- /usr/include/bits/pthreadtypes.h /usr/include/bits/sigthread.h \
- /usr/include/glib-2.0/glib/gbase64.h \
+ /usr/include/bits/sigstack.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/bits/sigthread.h /usr/include/glib-2.0/glib/gbase64.h \
  /usr/include/glib-2.0/glib/gbitlock.h \
  /usr/include/glib-2.0/glib/gbookmarkfile.h /usr/include/bits/time.h \
  /usr/include/glib-2.0/glib/gcache.h /usr/include/glib-2.0/glib/glist.h \
@@ -39,8 +38,7 @@ libqq_la-qq_crypt.lo: qq_crypt.c /usr/include/string.h \
  /usr/include/glib-2.0/glib/gcompletion.h \
  /usr/include/glib-2.0/glib/gconvert.h \
  /usr/include/glib-2.0/glib/gdataset.h /usr/include/glib-2.0/glib/gdate.h \
- /usr/include/glib-2.0/glib/gdatetime.h \
- /usr/include/glib-2.0/glib/gtimezone.h /usr/include/glib-2.0/glib/gdir.h \
+ /usr/include/glib-2.0/glib/gdir.h \
  /usr/include/glib-2.0/glib/gfileutils.h \
  /usr/include/glib-2.0/glib/ghash.h /usr/include/glib-2.0/glib/ghook.h \
  /usr/include/glib-2.0/glib/ghostutils.h \
@@ -67,7 +65,6 @@ libqq_la-qq_crypt.lo: qq_crypt.c /usr/include/string.h \
  /usr/include/glib-2.0/glib/gurifuncs.h \
  /usr/include/glib-2.0/glib/gvarianttype.h \
  /usr/include/glib-2.0/glib/gvariant.h qq_crypt.h \
- /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
  /usr/include/sys/types.h /usr/include/sys/select.h \
  /usr/include/bits/select.h /usr/include/sys/sysmacros.h \
  /usr/include/alloca.h /usr/include/bits/stdlib.h
@@ -86,7 +83,7 @@ libqq_la-qq_crypt.lo: qq_crypt.c /usr/include/string.h \
 
 /usr/include/gnu/stubs-32.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.4.5/include/stddef.h:
+/usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h:
 
 /usr/include/xlocale.h:
 
@@ -120,9 +117,9 @@ libqq_la-qq_crypt.lo: qq_crypt.c /usr/include/string.h \
 
 /usr/include/glib-2.0/glib/gmacros.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/limits.h:
+/usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/limits.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.4.5/include-fixed/syslimits.h:
+/usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/syslimits.h:
 
 /usr/include/limits.h:
 
@@ -134,7 +131,7 @@ libqq_la-qq_crypt.lo: qq_crypt.c /usr/include/string.h \
 
 /usr/include/bits/posix2_lim.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.4.5/include/float.h:
+/usr/lib/gcc/i486-linux-gnu/4.4.3/include/float.h:
 
 /usr/include/glib-2.0/glib/garray.h:
 
@@ -144,7 +141,7 @@ libqq_la-qq_crypt.lo: qq_crypt.c /usr/include/string.h \
 
 /usr/include/glib-2.0/glib/gerror.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.4.5/include/stdarg.h:
+/usr/lib/gcc/i486-linux-gnu/4.4.3/include/stdarg.h:
 
 /usr/include/glib-2.0/glib/gquark.h:
 
@@ -169,8 +166,6 @@ libqq_la-qq_crypt.lo: qq_crypt.c /usr/include/string.h \
 /usr/include/bits/sigcontext.h:
 
 /usr/include/bits/sigstack.h:
-
-/usr/include/sys/ucontext.h:
 
 /usr/include/bits/pthreadtypes.h:
 
@@ -201,10 +196,6 @@ libqq_la-qq_crypt.lo: qq_crypt.c /usr/include/string.h \
 /usr/include/glib-2.0/glib/gdataset.h:
 
 /usr/include/glib-2.0/glib/gdate.h:
-
-/usr/include/glib-2.0/glib/gdatetime.h:
-
-/usr/include/glib-2.0/glib/gtimezone.h:
 
 /usr/include/glib-2.0/glib/gdir.h:
 
@@ -279,10 +270,6 @@ libqq_la-qq_crypt.lo: qq_crypt.c /usr/include/string.h \
 /usr/include/glib-2.0/glib/gvariant.h:
 
 qq_crypt.h:
-
-/usr/include/bits/waitflags.h:
-
-/usr/include/bits/waitstatus.h:
 
 /usr/include/sys/types.h:
 

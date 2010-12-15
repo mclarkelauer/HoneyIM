@@ -44,7 +44,7 @@ FULL_AR = /usr/bin/ar
 LD = cc
 LDDLFLAGS = -shared -O2 -g -L/usr/local/lib -fstack-protector
 LDFLAGS =  -fstack-protector -L/usr/local/lib
-LIBC = /lib/libc-2.12.so
+LIBC = /lib/libc-2.11.1.so
 LIB_EXT = .a
 OBJ_EXT = .o
 OSNAME = linux
@@ -88,9 +88,9 @@ INSTALLSITELIB = $(INSTALL_BASE)/lib/perl5
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = $(INSTALL_BASE)/lib/perl5
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = $(INSTALL_BASE)/lib/perl5/i686-linux-gnu-thread-multi
+INSTALLARCHLIB = $(INSTALL_BASE)/lib/perl5/i486-linux-gnu-thread-multi
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = $(INSTALL_BASE)/lib/perl5/i686-linux-gnu-thread-multi
+INSTALLSITEARCH = $(INSTALL_BASE)/lib/perl5/i486-linux-gnu-thread-multi
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = $(libdir)/purple-$(PURPLE_MAJOR_VERSION)/perl
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
@@ -977,7 +977,7 @@ PERL_HDRS = \
 
 $(OBJECT) : $(PERL_HDRS)
 
-Conversation.c Server.c SSLConn.c Signal.c PluginPref.c Pounce.c FT.c Core.c Util.c XMLNode.c Plugin.c Stringref.c BuddyIcon.c BuddyList.c Request.c Prpl.c Idle.c ImgStore.c Whiteboard.c SavedStatuses.c Purple.c Cmds.c AccountOpts.c Roomlist.c Proxy.c Log.c Privacy.c Account.c Status.c Smiley.c Certificate.c Network.c Notify.c Prefs.c Connection.c Sound.c Debug.c Cipher.c : $(XSUBPPDEPS)
+Conversation.c Server.c Signal.c SSLConn.c Pounce.c PluginPref.c FT.c Core.c Util.c XMLNode.c Plugin.c Stringref.c BuddyIcon.c Request.c BuddyList.c Prpl.c Whiteboard.c ImgStore.c Idle.c SavedStatuses.c Purple.c Cmds.c AccountOpts.c Roomlist.c Proxy.c Log.c Privacy.c Account.c Smiley.c Status.c Certificate.c Prefs.c Notify.c Network.c Connection.c Sound.c Debug.c Cipher.c : $(XSUBPPDEPS)
 
 
 # --- MakeMaker makefile section:
@@ -1054,7 +1054,7 @@ ppd :
 	$(NOECHO) $(ECHO) '    <ABSTRACT>Perl extension to the libpurple instant messenger library.</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>Purple &lt;http://pidgin.im/&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="i686-linux-gnu-thread-multi-5.10" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="i486-linux-gnu-thread-multi-5.10" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    </IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '</SOFTPKG>' >> $(DISTNAME).ppd

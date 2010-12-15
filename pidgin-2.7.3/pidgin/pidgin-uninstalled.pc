@@ -6,8 +6,8 @@ datarootdir=${prefix}/share
 datadir=${datarootdir}
 sysconfdir=${prefix}/etc
 
-abs_srcdir=/home/mclarkelauer/HoneyIM/pidgin-2.7.3/pidgin
-abs_builddir=/home/mclarkelauer/HoneyIM/pidgin-2.7.3/pidgin
+abs_srcdir=/home/mdlauer/HoneyIM/pidgin-2.7.3/pidgin
+abs_builddir=/home/mdlauer/HoneyIM/pidgin-2.7.3/pidgin
 
 plugindir=${libdir}/pidgin
 

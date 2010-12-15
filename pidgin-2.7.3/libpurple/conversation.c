@@ -462,23 +462,27 @@ void UrlTokenizer(const char* Message)
     char * pch;
     char token[MAX_STRING];
     char temp[MAX_STRING];
+    int start = 0;
+    int end = 0;
 
     strcpy(temp,Message);
 	
-    pch = strtok (temp," ");
-    //data_store_write(Message);
-    while (pch != NULL)
+//    puts(Message);
+
+    while (end < strlen(Message))
     {
-		if( strlen(pch) < MAX_STRING )
-		{
-			strcpy(token,pch);
-			removeCase(pch);
-			if( strlen(pch) > 4 && (isUrl(pch) || isIP(pch) || isEmail(pch)))
+        end++;
+        if( temp[end] == ' ')
+        {    
+            memset(token,0,MAX_STRING);
+    		strncpy(token,&temp[start],end - start);
+			removeCase(token);
+			if( strlen(token) > 4 && (isUrl(token) || isIP(token) || isEmail(token)))
 			{    
 				data_store_write(token);
 			}
+            start = end;
 		}
-		pch = strtok (NULL, " ");
 		
     }
     return;

@@ -15,7 +15,7 @@
 #     AUTHOR => q[Pidgin <http://pidgin.im/>]
 #     BUILD_REQUIRES => {  }
 #     DEFINE => q[-Wall  -DPURPLE_DISABLE_DEPRECATED -DPIDGIN_DISABLE_DEPRECATED -DFINCH_DISABLE_DEPRECATED -DGNT_DISABLE_DEPRECATED -Waggregate-return -Wcast-align -Wdeclaration-after-statement -Wendif-labels -Werror-implicit-function-declaration -Wextra -Wno-sign-compare -Wno-unused-parameter -Wformat-security -Werror=format-security -Winit-self -Wmissing-declarations -Wmissing-noreturn -Wmissing-prototypes -Wpointer-arith -Wundef -Wp,-D_FORTIFY_SOURCE=2]
-#     INC => q[-I. -I. -I../../../.. -I../../../../libpurple -I../../../../pidgin -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12  ]
+#     INC => q[-I. -I. -I../../../.. -I../../../../libpurple -I../../../../pidgin -pthread -D_REENTRANT -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/directfb -I/usr/include/libpng12  ]
 #     INSTALLDIRS => q[vendor]
 #     INSTALLVENDORARCH => q[$(libdir)/pidgin/perl]
 #     INSTALLVENDORMAN3DIR => q[$(mandir)/man3]
@@ -45,7 +45,7 @@ FULL_AR = /usr/bin/ar
 LD = cc
 LDDLFLAGS = -shared -O2 -g -L/usr/local/lib -fstack-protector
 LDFLAGS =  -fstack-protector -L/usr/local/lib
-LIBC = /lib/libc-2.12.so
+LIBC = /lib/libc-2.11.1.so
 LIB_EXT = .a
 OBJ_EXT = .o
 OSNAME = linux
@@ -89,9 +89,9 @@ INSTALLSITELIB = $(INSTALL_BASE)/lib/perl5
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = $(INSTALL_BASE)/lib/perl5
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = $(INSTALL_BASE)/lib/perl5/i686-linux-gnu-thread-multi
+INSTALLARCHLIB = $(INSTALL_BASE)/lib/perl5/i486-linux-gnu-thread-multi
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = $(INSTALL_BASE)/lib/perl5/i686-linux-gnu-thread-multi
+INSTALLSITEARCH = $(INSTALL_BASE)/lib/perl5/i486-linux-gnu-thread-multi
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = $(libdir)/pidgin/perl
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
@@ -155,7 +155,7 @@ BASEEXT = Pidgin
 PARENT_NAME = 
 DLBASE = $(BASEEXT)
 VERSION_FROM = ./Pidgin.pm
-INC = -I. -I. -I../../../.. -I../../../../libpurple -I../../../../pidgin -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12  
+INC = -I. -I. -I../../../.. -I../../../../libpurple -I../../../../pidgin -pthread -D_REENTRANT -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/directfb -I/usr/include/libpng12  
 DEFINE = -Wall  -DPURPLE_DISABLE_DEPRECATED -DPIDGIN_DISABLE_DEPRECATED -DFINCH_DISABLE_DEPRECATED -DGNT_DISABLE_DEPRECATED -Waggregate-return -Wcast-align -Wdeclaration-after-statement -Wendif-labels -Werror-implicit-function-declaration -Wextra -Wno-sign-compare -Wno-unused-parameter -Wformat-security -Werror=format-security -Winit-self -Wmissing-declarations -Wmissing-noreturn -Wmissing-prototypes -Wpointer-arith -Wundef -Wp,-D_FORTIFY_SOURCE=2
 OBJECT = $(O_FILES)
 LDFROM = $(OBJECT)
@@ -931,7 +931,7 @@ PERL_HDRS = \
 
 $(OBJECT) : $(PERL_HDRS)
 
-GtkSavedStatuses.c GtkPounce.c GtkPrivacy.c GtkConn.c GtkDebug.c GtkPlugin.c GtkThemes.c GtkConvWin.c GtkIMHtmlToolbar.c GtkSession.c GtkDialogs.c GtkPluginPref.c GtkIMHtml.c GtkConv.c GtkFt.c GtkSound.c GtkMenuTray.c GtkStatusBox.c GtkUtils.c GtkPrefs.c GtkAccount.c GtkLog.c GtkBlist.c GtkRoomlist.c Pidgin.c : $(XSUBPPDEPS)
+GtkSavedStatuses.c GtkPrivacy.c GtkPounce.c GtkConn.c GtkPlugin.c GtkDebug.c GtkThemes.c GtkConvWin.c GtkIMHtmlToolbar.c GtkSession.c GtkDialogs.c GtkPluginPref.c GtkIMHtml.c GtkConv.c GtkFt.c GtkSound.c GtkMenuTray.c GtkStatusBox.c GtkUtils.c GtkPrefs.c GtkAccount.c GtkLog.c GtkBlist.c GtkRoomlist.c Pidgin.c : $(XSUBPPDEPS)
 
 
 # --- MakeMaker makefile section:
@@ -1008,7 +1008,7 @@ ppd :
 	$(NOECHO) $(ECHO) '    <ABSTRACT>Perl extension for the Pidgin instant messenger.</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>Pidgin &lt;http://pidgin.im/&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="i686-linux-gnu-thread-multi-5.10" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="i486-linux-gnu-thread-multi-5.10" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    </IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '</SOFTPKG>' >> $(DISTNAME).ppd

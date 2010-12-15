@@ -80,12 +80,12 @@ am__v_lt_0 = --silent
 ssl_gnutls_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(ssl_gnutls_la_CFLAGS) \
 	$(CFLAGS) $(ssl_gnutls_la_LDFLAGS) $(LDFLAGS) -o $@
-##am_ssl_gnutls_la_rpath =  \
-##	-rpath \
-##	$(plugindir)
 #am_ssl_gnutls_la_rpath =  \
 #	-rpath \
 #	$(plugindir)
+am_ssl_gnutls_la_rpath =  \
+	-rpath \
+	$(plugindir)
 ssl_nss_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
 am__ssl_nss_la_SOURCES_DIST = ssl-nss.c
@@ -94,12 +94,12 @@ ssl_nss_la_OBJECTS = $(am_ssl_nss_la_OBJECTS)
 ssl_nss_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(ssl_nss_la_CFLAGS) \
 	$(CFLAGS) $(ssl_nss_la_LDFLAGS) $(LDFLAGS) -o $@
-am_ssl_nss_la_rpath =  \
-	-rpath \
-	$(plugindir)
 #am_ssl_nss_la_rpath =  \
 #	-rpath \
 #	$(plugindir)
+am_ssl_nss_la_rpath =  \
+	-rpath \
+	$(plugindir)
 ssl_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
 am__ssl_la_SOURCES_DIST = ssl.c
 am_ssl_la_OBJECTS = ssl.lo
@@ -107,17 +107,17 @@ ssl_la_OBJECTS = $(am_ssl_la_OBJECTS)
 ssl_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 	$(ssl_la_LDFLAGS) $(LDFLAGS) -o $@
-#am_ssl_la_rpath =  \
-#	-rpath \
-#	$(plugindir)
-am_ssl_la_rpath =  \
-	-rpath \
-	$(plugindir)
 ##am_ssl_la_rpath =  \
 ##	-rpath \
 ##	$(plugindir)
-#am_ssl_la_rpath = -rpath \
+#am_ssl_la_rpath =  \
+#	-rpath \
 #	$(plugindir)
+#am_ssl_la_rpath =  \
+#	-rpath \
+#	$(plugindir)
+am_ssl_la_rpath = -rpath \
+	$(plugindir)
 DEFAULT_INCLUDES = -I. -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -151,18 +151,18 @@ DIST_SOURCES = $(am__ssl_gnutls_la_SOURCES_DIST) \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/mclarkelauer/HoneyIM/pidgin-2.7.3/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /home/mdlauer/HoneyIM/pidgin-2.7.3/missing --run aclocal-1.11
 ALLOCA = 
 ALL_LINGUAS = af am ar az be@latin bg bn bn_IN bs ca ca@valencia cs da de dz el en_AU en_CA en_GB eo es et eu fa fi fr ga gl gu he hi hu hy id it ja ka km kn ko ku lo lt mk mn mr ms_MY my_MM nb ne nl nn oc or pa pl pt_BR pt ps ro ru si sk sl sq sr sr@latin sv sw ta te th tr uk ur vi xh zh_CN zh_HK zh_TW
-AMTAR = ${SHELL} /home/mclarkelauer/HoneyIM/pidgin-2.7.3/missing --run tar
+AMTAR = ${SHELL} /home/mdlauer/HoneyIM/pidgin-2.7.3/missing --run tar
 AM_DEFAULT_VERBOSITY = 0
 AR = ar
-AUTOCONF = ${SHELL} /home/mclarkelauer/HoneyIM/pidgin-2.7.3/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/mclarkelauer/HoneyIM/pidgin-2.7.3/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/mclarkelauer/HoneyIM/pidgin-2.7.3/missing --run automake-1.11
+AUTOCONF = ${SHELL} /home/mdlauer/HoneyIM/pidgin-2.7.3/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/mdlauer/HoneyIM/pidgin-2.7.3/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/mdlauer/HoneyIM/pidgin-2.7.3/missing --run automake-1.11
 AVAHI_CFLAGS = -D_REENTRANT -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include  
 AVAHI_LIBS = -lavahi-common -lavahi-client -lavahi-glib -lglib-2.0  
-AWK = mawk
+AWK = gawk
 CATALOGS =  af.gmo am.gmo ar.gmo az.gmo be@latin.gmo bg.gmo bn.gmo bn_IN.gmo bs.gmo ca.gmo ca@valencia.gmo cs.gmo da.gmo de.gmo dz.gmo el.gmo en_AU.gmo en_CA.gmo en_GB.gmo eo.gmo es.gmo et.gmo eu.gmo fa.gmo fi.gmo fr.gmo ga.gmo gl.gmo gu.gmo he.gmo hi.gmo hu.gmo hy.gmo id.gmo it.gmo ja.gmo ka.gmo km.gmo kn.gmo ko.gmo ku.gmo lo.gmo lt.gmo mk.gmo mn.gmo mr.gmo ms_MY.gmo my_MM.gmo nb.gmo ne.gmo nl.gmo nn.gmo oc.gmo or.gmo pa.gmo pl.gmo pt_BR.gmo pt.gmo ps.gmo ro.gmo ru.gmo si.gmo sk.gmo sl.gmo sq.gmo sr.gmo sr@latin.gmo sv.gmo sw.gmo ta.gmo te.gmo th.gmo tr.gmo uk.gmo ur.gmo vi.gmo xh.gmo zh_CN.gmo zh_HK.gmo zh_TW.gmo
 CATOBJEXT = .gmo
 CC = gcc
@@ -215,16 +215,16 @@ GNT_MICRO_VERSION = 0
 GNT_MINOR_VERSION = 8
 GNT_VERSION = gnt_display_version
 GNUTLS_CFLAGS = 
-GNUTLS_LIBS = 
+GNUTLS_LIBS =  -lgnutls -lgcrypt
 GREP = /bin/grep
 GSTINTERFACES_CFLAGS = -pthread -I/usr/include/gstreamer-0.10 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/libxml2  
 GSTINTERFACES_LIBS = -pthread -lgstinterfaces-0.10 -lgstreamer-0.10 -lgobject-2.0 -lgmodule-2.0 -lxml2 -lgthread-2.0 -lrt -lglib-2.0  
 GSTREAMER_CFLAGS = -pthread -I/usr/include/gstreamer-0.10 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/libxml2  
 GSTREAMER_LIBS = -pthread -lgstreamer-0.10 -lgobject-2.0 -lgmodule-2.0 -lxml2 -lgthread-2.0 -lrt -lglib-2.0  
-GTKSPELL_CFLAGS = -pthread -I/usr/include/gtkspell-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12  
-GTKSPELL_LIBS = -pthread -lgtkspell -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangoft2-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lm -lcairo -lpng12 -lpango-1.0 -lfreetype -lfontconfig -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -lrt -lglib-2.0  
-GTK_CFLAGS = -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12  
-GTK_LIBS = -pthread -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangoft2-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lm -lcairo -lpng12 -lpango-1.0 -lfreetype -lfontconfig -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -lrt -lglib-2.0  
+GTKSPELL_CFLAGS = -pthread -D_REENTRANT -I/usr/include/gtkspell-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/directfb -I/usr/include/libpng12  
+GTKSPELL_LIBS = -pthread -lgtkspell -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangoft2-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lcairo -lpango-1.0 -lfreetype -lfontconfig -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -lrt -lglib-2.0  
+GTK_CFLAGS = -pthread -D_REENTRANT -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/directfb -I/usr/include/libpng12  
+GTK_LIBS = -pthread -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangoft2-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lcairo -lpango-1.0 -lfreetype -lfontconfig -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -lrt -lglib-2.0  
 IDN_CFLAGS =  
 IDN_LIBS = -lidn  
 INSTALL = /usr/bin/install -c
@@ -253,7 +253,7 @@ LIBXML_LIBS = -lxml2
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/mclarkelauer/HoneyIM/pidgin-2.7.3/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/mdlauer/HoneyIM/pidgin-2.7.3/missing --run makeinfo
 MEANWHILE_CFLAGS = -I/usr/include/meanwhile -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include  
 MEANWHILE_LIBS = -lmeanwhile -lglib-2.0  
 MKDIR_P = /bin/mkdir -p
@@ -287,8 +287,6 @@ PERL = perl
 PERL_CFLAGS =  -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64  -I/usr/lib/perl/5.10/CORE 
 PERL_LIBS = -Wl,-E -fstack-protector -L/usr/local/lib -L/usr/lib/perl/5.10/CORE -lperl -ldl -lm -lpthread -lcrypt
 PKG_CONFIG = /usr/bin/pkg-config
-PKG_CONFIG_LIBDIR = 
-PKG_CONFIG_PATH = 
 PLUGINS_DEFINE = #define PURPLE_PLUGINS 1
 POFILES =  af.po am.po ar.po az.po be@latin.po bg.po bn.po bn_IN.po bs.po ca.po ca@valencia.po cs.po da.po de.po dz.po el.po en_AU.po en_CA.po en_GB.po eo.po es.po et.po eu.po fa.po fi.po fr.po ga.po gl.po gu.po he.po hi.po hu.po hy.po id.po it.po ja.po ka.po km.po kn.po ko.po ku.po lo.po lt.po mk.po mn.po mr.po ms_MY.po my_MM.po nb.po ne.po nl.po nn.po oc.po or.po pa.po pl.po pt_BR.po pt.po ps.po ro.po ru.po si.po sk.po sl.po sq.po sr.po sr@latin.po sv.po sw.po ta.po te.po th.po tr.po uk.po ur.po vi.po xh.po zh_CN.po zh_HK.po zh_TW.po
 POSUB = po
@@ -336,10 +334,10 @@ X_PRE_LIBS =  -lSM -lICE
 ZEPHYR_CFLAGS = 
 ZEPHYR_LDFLAGS = 
 ZEPHYR_LIBS = 
-abs_builddir = /home/mclarkelauer/HoneyIM/pidgin-2.7.3/libpurple/plugins/ssl
-abs_srcdir = /home/mclarkelauer/HoneyIM/pidgin-2.7.3/libpurple/plugins/ssl
-abs_top_builddir = /home/mclarkelauer/HoneyIM/pidgin-2.7.3
-abs_top_srcdir = /home/mclarkelauer/HoneyIM/pidgin-2.7.3
+abs_builddir = /home/mdlauer/HoneyIM/pidgin-2.7.3/libpurple/plugins/ssl
+abs_srcdir = /home/mdlauer/HoneyIM/pidgin-2.7.3/libpurple/plugins/ssl
+abs_top_builddir = /home/mdlauer/HoneyIM/pidgin-2.7.3
+abs_top_srcdir = /home/mdlauer/HoneyIM/pidgin-2.7.3
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
 am__include = include
@@ -371,7 +369,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/mclarkelauer/HoneyIM/pidgin-2.7.3/install-sh
+install_sh = ${SHELL} /home/mdlauer/HoneyIM/pidgin-2.7.3/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -402,25 +400,25 @@ plugindir = $(libdir)/purple-$(PURPLE_MAJOR_VERSION)
 ssl_la_LDFLAGS = -module -avoid-version
 ssl_gnutls_la_LDFLAGS = -module -avoid-version
 ssl_nss_la_LDFLAGS = -module -avoid-version
-#plugin_LTLIBRARIES = \
-#	ssl.la
-
-plugin_LTLIBRARIES = \
-	ssl.la           \
-	ssl-nss.la
-
 ##plugin_LTLIBRARIES = \
-##	ssl.la           \
-##	ssl-gnutls.la
+##	ssl.la
+
+#plugin_LTLIBRARIES = \
+#	ssl.la           \
+#	ssl-nss.la
+
+#plugin_LTLIBRARIES = \
+#	ssl.la           \
+#	ssl-gnutls.la
 
 
 # I'm sorry to report that Automake Conditionals don't support
 #   if USE_GNUTLS && USE_NSS
 # but only support testing a single variable. Hence:
-#plugin_LTLIBRARIES = \
-#	ssl.la           \
-#	ssl-gnutls.la    \
-#	ssl-nss.la
+plugin_LTLIBRARIES = \
+	ssl.la           \
+	ssl-gnutls.la    \
+	ssl-nss.la
 
 ssl_la_SOURCES = ssl.c
 ssl_gnutls_la_SOURCES = ssl-gnutls.c
